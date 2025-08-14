@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Música de Fondo</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    /* Estilo para el efecto parallax */
+    .parallax{
+      background-image: url("chica1.jpg"); /* Cambia aquí tu imagen */
+      min-height: 900px;
+      background-attachment: fixed;
+      background-position:90%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+     .parallax1{
+      background-image:url("chica2.jpg"); /* Cambia aquí tu imagen */
+      min-height: 500px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+     .parallax2{
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb'); /* Cambia aquí tu imagen */
+      min-height: 500px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+     .parallax3{
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb'); /* Cambia aquí tu imagen */
+      min-height: 500px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-blue-100 min-h-screen flex flex-col">
+
+
+     <!-- Sección Parallax -->
+  <section class="parallax flex flex-col items-center justify-center ">
+    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-center">
+    <h1 class="text-white text-4xl font-bold bg-black/50 p-2 rounded-lg">
+      Alisson
+    </h1>
+    <p class="text-white text-4xl font-bold bg-black/50 p-2 rounded-lg">
+        MIS XV
+    </p>
+    </div>
+  </section>
+
+  <!-- Contenido normal -->
+  <section class="p-10 bg-white shadow-lg">
+    <h2 class="text-3xl font-semibold mb-4">Contenido de la Página</h2>
+    <p class="text-gray-700 leading-relaxed">
+      Este es el contenido que se desplazará mientras la imagen de fondo permanece fija,
+      creando el efecto de profundidad característico del parallax.  
+      Puedes añadir más secciones para que el scroll sea más notorio.
+    </p>
+  </section>
+
+  <!-- Otra sección Parallax -->
+  <section class="parallax1 flex items-center justify-center">
+    <h2 class="text-white text-4xl font-bold bg-black/50 p-4 rounded-lg">
+      Segunda sección parallax
+    </h2>
+  </section>
+
+  <section class="p-10 bg-white shadow-lg">
+    <h2 class="text-3xl font-semibold mb-4">Más contenido</h2>
+    <p class="text-gray-700 leading-relaxed">
+      El efecto parallax ayuda a dar un toque moderno y dinámico al sitio sin sobrecargarlo.
+    </p>
+  </section>
+
+<!-- Encabezado -->
+<header class="bg-blue-600 text-white shadow-md">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">🎵 Mi Página Musical</h1>
+    <nav class="space-x-4">
+      <a href="#" class="hover:underline">Inicio</a>
+      <a href="#" class="hover:underline">Productos</a>
+      <a href="#" class="hover:underline">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Contenido principal -->
+<main class="flex-grow max-w-6xl mx-auto px-6 py-12 text-center">
+  
+  <h2 class="text-4xl font-bold text-gray-800 mb-4">Bienvenido a nuestra página</h2>
+  <p class="text-lg text-gray-600 mb-8">
+    Disfruta de una experiencia única mientras navegas.  
+    Tendrás la opción de escuchar música de fondo para acompañarte en tu visita.
+  </p>
+  <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=1000&q=80" 
+       alt="Imagen musical" 
+       class="rounded-2xl shadow-lg mx-auto w-full max-w-xl">
+   
+ 
+ <!-- contador fiesta -->
+       <h2 class="text-3xl font-bold mb-6"> Cuenta Regresiva </h2>
+       <div id="countdown" class="px-12 flex space-x-10 text-center text-4xl font-mono rounded-2xl shadow-lg mx-auto w-full max-w-xl">
+        <div>
+            <span id="days" class="block text-yellow-400">00</span>
+            <span class="text-sm">Días</span>
+        </div>
+        <div>
+            <span id="hours" class="block text-green-400">00</span>
+            <span class="text-sm">Horas</span>
+        </div>
+        <div>
+            <span id="minutes" class="block text-blue-400">00</span>
+            <span class="text-sm">Min</span>
+        </div>
+        <div>
+            <span id="seconds" class="block text-red-400">00</span>
+            <span class="text-sm">Seg</span>
+        </div>
+    </div>
+</main>
+
+<!-- Pie de página -->
+<footer class="bg-blue-600 text-white py-4 mt-10">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    &copy; 2025 Mi Página Musical. Todos los derechos reservados.
+  </div>
+</footer>
+
+<!-- Ventana emergente -->
+<div id="musicModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-2xl shadow-xl p-6 w-80 text-center animate-fadeIn">
+    <h2 class="text-xl font-bold text-gray-800 mb-3">🎵 ¿Quieres escuchar música?</h2>
+    <p class="text-gray-600 mb-5">Reproduce una canción de fondo mientras navegas por la página.</p>
+    <div class="flex justify-center gap-4">
+      <button id="yesBtn" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Sí</button>
+      <button id="noBtn" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg">No</button>
+    </div>
+  </div>
+</div>
+
+<!-- Botón flotante -->
+<button id="musicToggle" class="hidden fixed bottom-5 left-5 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg">
+  ⏸️
+</button>
+
+<!-- Audio -->
+<audio id="bgMusic" loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio HTML5.
+</audio>
+
+<!-- Estilos de animación -->
+<style>
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+</style>
+
+<script>
+
+// 🔹 Fecha objetivo (cámbiala a la fecha que quieras)
+const targetDate = new Date("2025-08-16T00:00:00").getTime();
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance <= 0) {
+        document.getElementById("countdown").innerHTML = "🎊 ¡Llegó el momento! 🎊";
+        launchCelebration();
+        clearInterval(timer);
+        return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = String(days).padStart(2, "0");
+    document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+    document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+    document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+}
+
+// 🔹 Animación de globos y serpentinas
+function launchCelebration() {
+    let duration = 5000;
+    let end = Date.now() + duration;
+
+    (function frame() {
+        // Serpentinas
+        confetti({
+            particleCount: 5,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 }
+        });
+        confetti({
+            particleCount: 5,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 }
+        });
+
+        // Globos simulados (círculos grandes)
+        confetti({
+            particleCount: 3,
+            startVelocity: 30,
+            spread: 360,
+            ticks: 200,
+            shapes: ['circle'],
+            scalar: 2,
+            origin: { y: 0.6 }
+        });
+
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+    }());
+}
+
+let timer = setInterval(updateCountdown, 1000);
+updateCountdown();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const modal = document.getElementById("musicModal");
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+const music = document.getElementById("bgMusic");
+const toggleBtn = document.getElementById("musicToggle");
+
+let isPlaying = false;
+
+// Mostrar modal solo si no hay preferencia guardada
+window.addEventListener("DOMContentLoaded", () => {
+  const musicPref = localStorage.getItem("musicPreference");
+
+  if (musicPref === null) {
+    modal.classList.remove("hidden");
+  } else {
+    toggleBtn.classList.remove("hidden");
+    if (musicPref === "yes") {
+      fadeInMusic();
+    }
+  }
+});
+
+yesBtn.addEventListener("click", () => {
+  localStorage.setItem("musicPreference", "yes");
+  fadeInMusic();
+  closeModal();
+});
+
+noBtn.addEventListener("click", () => {
+  localStorage.setItem("musicPreference", "no");
+  closeModal();
+});
+
+toggleBtn.addEventListener("click", () => {
+  if (isPlaying) {
+    fadeOutMusic();
+    toggleBtn.textContent = "▶️";
+  } else {
+    fadeInMusic();
+    toggleBtn.textContent = "⏸️";
+  }
+});
+
+// Reproducción suave (fade in)
+function fadeInMusic() {
+  music.volume = 0;
+  music.play();
+  isPlaying = true;
+  toggleBtn.textContent = "⏸️";
+  
+  let vol = 0;
+  const fade = setInterval(() => {
+    if (vol < 1) {
+      vol += 0.05;
+      music.volume = vol;
+    } else {
+      clearInterval(fade);
+    }
+  }, 50);
+}
+
+// Detener suavemente (fade out)
+function fadeOutMusic() {
+  let vol = music.volume;
+  const fade = setInterval(() => {
+    if (vol > 0) {
+      vol -= 0.05;
+      music.volume = vol;
+    } else {
+      clearInterval(fade);
+      music.pause();
+      isPlaying = false;
+    }
+  }, 50);
+}
+
+function closeModal() {
+  modal.classList.add("hidden");
+  toggleBtn.classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
